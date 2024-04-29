@@ -1,0 +1,25 @@
+﻿<Window x:Class="Trachuk.Cg.Rgr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trachuk.Cg.Rgr"
+        xmlns:gl="clr-namespace:OpenTK.Wpf;assembly=GLWpfControl"
+        mc:Ignorable="d"
+        Title="РГР КГ Виконала Трачук Тетяна" Height="700" Width="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock>Fog Min Distance:</TextBlock>
+            <Slider Value="{Binding FogStart}" Minimum="0" Maximum="600"/>
+            <TextBlock>Fog Max Distance:</TextBlock>
+            <Slider Value="{Binding FogComplete}" Minimum="0" Maximum="600"/>
+            <TextBlock>Fog Color:</TextBlock>
+            <TextBox Text="{Binding FogColor}"></TextBox>
+        </StackPanel>
+        <gl:GLWpfControl Grid.Column="1" x:Name="glControl"/>
+    </Grid>
+</Window>
